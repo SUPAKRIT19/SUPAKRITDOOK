@@ -93,9 +93,6 @@ h5 {
 
 
 
-
-
-/* Style the buttons that are used to open and close the accordion panel */
 .accordion {
     background-color: #eee;
     color: #000000;
@@ -109,12 +106,11 @@ h5 {
     transition: 0.4s;
   }
   
-  /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
   .active, .accordion:hover {
     background-color: #ccc;
   }
   
-  /* Style the accordion panel. Note: hidden by default */
+  
   .panel {
     padding: 0 18px;
     background: #ffffff;
@@ -184,19 +180,18 @@ h5 {
     clear: both;
   }
   
-/* Container needed to position the overlay. Adjust the width as needed */
+
 .container {
     position: relative;
     width: 60%;
   }
   
-  /* Make the image to responsive */
+ 
   .image {
     width: 100%;
     height: auto;
   }
   
-  /* The overlay effect (full height and width) - lays on top of the container and over the image */
   .overlay {
     position: absolute;
     bottom: 0;
@@ -210,12 +205,10 @@ h5 {
     transition: .3s ease;
   }
   
-  /* When you mouse over the container, the overlay text will "zoom" in display */
   .container:hover .overlay {
     transform: scale(1);
   }
   
-  /* Some text inside the overlay, which is positioned in the middle vertically and horizontally */
   .text {
     color: white;
     font-size: 20px;
@@ -228,19 +221,16 @@ h5 {
 
   * {box-sizing:border-box}
 
-/* Slideshow container */
 .slideshow-container {
   max-width: 1000px;
   position: relative;
   margin: auto;
 }
 
-/* Hide the images by default */
 .mySlides {
   display: none;
 }
 
-/* Next & previous buttons */
 .prev, .next {
   cursor: pointer;
   position: absolute;
@@ -256,61 +246,15 @@ h5 {
   user-select: none;
 }
 
-/* Position the "next button" to the right */
-.next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
 }
 
-/* On hover, add a black background color with a little bit see-through */
-.prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.8);
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
 }
 
-
-/* Number text (1/3 etc) */
-.numbertext {
-  color: #000000;
-  font-size: 12px;
-  padding: 8px 12px;
-  position: absolute;
-  top: 0;
-}
-
-/* The dots/bullets/indicators */
-.dot {
-  cursor: pointer;
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
-}
-
-.active, .dot:hover {
-  background-color: #717171;
-}
-
-/* Fading animation */
-.fade {
-  animation-name: fade;
-  animation-duration: 1.5s;
-}
-
-@keyframes fade {
-  from {opacity: .4}
-  to {opacity: 1}
-}
-
-div.scroll-container {
-    background-color: #333;
-    overflow: auto;
-    white-space: nowrap;
-    padding: 10px;
-  }
-  
-  div.scroll-container img {
-    padding: 10px;
-  }
